@@ -17,11 +17,6 @@ function VideoCardGroup({
           <Title style={{ backgroundColor: categoryColor || 'red' }}>
             {categoryTitle}
           </Title>
-          {categoryExtraLink && 
-            <ExtraLink href={categoryExtraLink.url} target="_blank">
-              {categoryExtraLink.text}  
-            </ExtraLink>
-          }
         </>
       )}
       <VideoCardList>
