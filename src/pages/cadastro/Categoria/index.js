@@ -3,12 +3,12 @@ import PageDefault from "../../../components/PageDefault"
 import { Link } from 'react-router-dom'
 
 function CadastroCategoria(){
-   const [categorias, setCategorias] = useState(['Teste'])
-   const valoresIniciais={
-     nome: 'Valor',
-     descricao: 'descricao',
-     cor: '#000'
-   }
+  const valoresIniciais={
+    nome: '',
+    descricao: '',
+    cor: ''
+  }
+   const [categorias, setCategorias] = useState([])
    const [values, setValues] = useState(valoresIniciais)
     
    function setValue(chave, valor){
@@ -19,7 +19,11 @@ function CadastroCategoria(){
    }
 
    function onChangeHandler(e) {
-    setValue(e.target.getAttribute('name'), e.target.value)
+     const {getAttribute, value} = e.target
+    setValue(
+      getAttribute('name'), 
+      value
+      )
   }
 
     return(
@@ -31,6 +35,7 @@ function CadastroCategoria(){
             ...categorias,
             values
           ])
+          setValues(valoresIniciais)
         }}>
           <div>
             <label>
@@ -72,7 +77,7 @@ function CadastroCategoria(){
           {categorias.map((categoria, index) => {
             return (
               <li key={`${categoria}${index}`}>
-                {categoria}
+                {categoria.nome}
               </li>
             )
           })}
