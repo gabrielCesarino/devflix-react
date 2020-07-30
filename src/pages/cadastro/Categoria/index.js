@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PageDefault from "../../../components/PageDefault"
 import { Link } from 'react-router-dom'
+import FormField from '../../../components/FormField'
 
 function CadastroCategoria(){
   const valoresIniciais={
@@ -19,10 +20,9 @@ function CadastroCategoria(){
    }
 
    function onChangeHandler(e) {
-     const {getAttribute, value} = e.target
-    setValue(
-      getAttribute('name'), 
-      value
+     setValue(
+      e.target.getAttribute('name'), 
+      e.target.value
       )
   }
 
@@ -37,38 +37,30 @@ function CadastroCategoria(){
           ])
           setValues(valoresIniciais)
         }}>
-          <div>
-            <label>
-              Nome da Categoria:
-            <input type="text"
-                name="nome"
-                value={values.nome}
-                onChange={onChangeHandler}
-              />
-            </label>
-          </div>
 
-          <div>
-            <label>
-              Descrição:
-            <textarea
-                value={values.descricao}
-                name="descricao"
-                onChange={onChangeHandler}
-             />
-            </label>
-          </div>
+          <FormField
+            label="Nome da Categoria: "
+            type="text"
+            name="nome"
+            value = {values.nome}
+            onChange = {onChangeHandler}
+          />
 
-          <div>
-            <label>
-              Descrição:
-            <input type="color"
-                value={values.cor}
-                name="cor"
-                onChange={onChangeHandler}
-              />
-            </label>
-          </div>
+          <FormField
+            label = "Descrição: "
+            type="textArea"
+            name="descricao"
+            value = {values.descricao}
+            onChange = {onChangeHandler}
+          />
+
+          <FormField
+            label = "Cor: "
+            type="color"
+            name="cor"
+            value = {values.cor}
+            onChange = {onChangeHandler}
+          />
 
           <button>Cadastrar</button>
         </form>
