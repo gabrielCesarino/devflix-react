@@ -2,7 +2,7 @@ import config from '../config'
 
 const URL_CATEGORIES = `${config.URL_BACKEND}/categorias?_embed=videos`
 
-function getAllWithVideos () {
+function getAllWithVideos() {
     return fetch (`${URL_CATEGORIES}`)
     .then( async (respostaDoServidor) => {
         
