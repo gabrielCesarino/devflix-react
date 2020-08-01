@@ -79,11 +79,13 @@ function CadastroCategoria(){
           <Button> Cadastrar </Button>
         </form>
 
-        {categorias.lenght === 0 && (
+        {categorias.length === 0 && (
           <div>
+            {/*Carregando*/ }
             Loading...
           </div>
         )}
+
         <ul>
           {categorias.map((categoria, index) => {
             return (
