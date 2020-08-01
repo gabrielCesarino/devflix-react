@@ -60,7 +60,7 @@ transition: border-color .3s;
   transform: scale(.6) translateY(-10px);
 }
 ${({ value }) => {
-  const hasValue = value.length > 0;
+  const hasValue = value.length;
   return hasValue && css`
       &:not([type='color']) + ${Label.Text} {
         transform: scale(.6) translateY(-10px);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PageDefault from "../../../components/PageDefault"
 import { Link } from 'react-router-dom'
 import FormField from '../../../components/FormField'
@@ -26,6 +26,18 @@ function CadastroCategoria(){
       e.target.value
       )
   }
+
+  useEffect(() => {
+    console.log("test")
+    const urlCategorias = 'http://localhost:5000/categorias'
+    fetch(urlCategorias)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json()
+        setCategorias([
+          ...resposta,
+        ])
+      })
+  }, [])
 
     return(
       <PageDefault>
@@ -66,10 +78,15 @@ function CadastroCategoria(){
           <Button> Cadastrar </Button>
         </form>
 
+        {categorias.lenght === 0 && (
+          <div>
+            Loading...
+          </div>
+        )}
         <ul>
           {categorias.map((categoria, index) => {
             return (
-              <li key={`${categoria}${index}`}>
+              <li key={`${categoria.nome}`}>
                 {categoria.nome}
               </li>
             )
