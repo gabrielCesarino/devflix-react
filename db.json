@@ -12,5 +12,68 @@
             "descricao": "Tecnologias de desenvolvimento Back-End",
             "cor": "#6bd1ff"
         }
+    ],
+
+    "videos": [
+        {
+            "id": 1,
+            "categoriaId": 1,
+            "titulo": "Recriando Pipefy do zero",
+            "url": "https://www.youtube.com/watch?v=awRtgpRsdTQ&t=1103s"
+        },
+        {
+            "id": 2,
+            "categoriaId": 1,
+            "titulo": "A Inteligência Artificial que vai SUBSTITUIR os Programadores",
+            "url": "https://www.youtube.com/watch?v=Eegnj0mY8OY"
+        },
+        {
+            "id": 3,
+            "categoriaId": 1,
+            "titulo": "Recriando a Interface do Discord com ReactJS ",
+            "url": "https://www.youtube.com/watch?v=x4FdZd2-_uU"
+        },
+        {
+            "id": 3,
+            "categoriaId": 1,
+            "titulo": "Recriando a Interface do Discord com ReactJS ",
+            "url": "https://www.youtube.com/watch?v=x4FdZd2-_uU"
+        },
+        {
+            "id": 4,
+            "categoriaId": 1,
+            "titulo": "O que faz uma desenvolvedora front-end?",
+            "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+        },
+        {
+            "id": 5,
+            "categoriaId": 2,
+            "titulo": "PHP vale a pena?",
+            "url": "https://www.youtube.com/watch?v=H43fXodv6WY"
+        },
+        {
+            "id": 6,
+            "categoriaId": 2,
+            "titulo": "Javascript, Python, PHP? Por qual linguagem de programação começar?",
+            "url": "https://www.youtube.com/watch?v=Hxk3XmK_WU4"
+        },
+        {
+            "id": 6,
+            "categoriaId": 2,
+            "titulo": "Javascript, Python, PHP? Por qual linguagem de programação começar?",
+            "url": "https://www.youtube.com/watch?v=Hxk3XmK_WU4"
+        },
+        {
+            "id": 7,
+            "categoriaId": 2,
+            "titulo": "Seja um Programador Back-End de Sucesso",
+            "url": "https://www.youtube.com/watch?v=TJ90DZjYdWI"
+        },
+        {
+            "id": 8,
+            "categoriaId": 2,
+            "titulo": "O que é NodeJs?",
+            "url": "https://www.youtube.com/watch?v=GKR6uSvEj8w"
+        }
     ]
 }
