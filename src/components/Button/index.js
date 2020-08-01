@@ -5,7 +5,7 @@ color: var(--white);
 border: 1px solid var(--white);
 box-sizing: border-box;
 cursor: pointer;
-padding: 16px 24px;
+padding: 8px 2px;
 font-style: normal;
 font-weight: bold;
 font-size: 16px;
@@ -14,6 +14,7 @@ border-radius: 5px;
 text-decoration: none;
 display: inline-block;
 transition: opacity .3s;
+background-color: #000;
 
 &:hover,
 &:focus {
