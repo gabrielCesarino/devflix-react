@@ -28,8 +28,9 @@ function CadastroCategoria(){
   }
 
   useEffect(() => {
-    console.log("test")
-    const urlCategorias = 'https://devflix-gabrielcesarino.herokuapp.com/categorias'
+    const urlCategorias = window.location.hostname.includes('localhost') 
+    ? 'http://localhost:8080/categorias'
+    : 'https://devflix-gabrielcesarino.herokuapp.com/categorias'
     fetch(urlCategorias)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json()
