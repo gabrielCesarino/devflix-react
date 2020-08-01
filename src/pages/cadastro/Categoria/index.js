@@ -40,7 +40,7 @@ function CadastroCategoria(){
         }}>
 
           <FormField
-            label="Nome da Categoria: "
+            label="Nome da Categoria"
             type="text"
             name="nome"
             value = {values.nome}
@@ -48,15 +48,15 @@ function CadastroCategoria(){
           />
 
           <FormField
-            label = "Descrição: "
-            type="textArea"
+            label = "Descrição"
+            type="textarea"
             name="descricao"
             value = {values.descricao}
             onChange = {onChangeHandler}
           />
 
           <FormField
-            label = "Cor: "
+            label = "Cor"
             type="color"
             name="cor"
             value = {values.cor}

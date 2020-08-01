@@ -3,9 +3,6 @@ import PropTypes from 'prop-types'
 import styled, { css }from 'styled-components'
 
 const FormFieldWrapper = styled.div`
-
-`
-const Label = styled.label `
   position: relative;
   textarea {
     min-height: 150px;
@@ -13,6 +10,9 @@ const Label = styled.label `
   input[type="color"] {
     padding-left: 56px;
   }
+`
+const Label = styled.label `
+  
 `
 
 Label.Text = styled.span`
@@ -77,9 +77,10 @@ function FormField({
   const isTypeTextarea = type === 'textarea'
   const tag = isTypeTextarea ? 'textarea' : 'input'
   return (
-    <div>
-      <label>
-        {label}
+    <FormFieldWrapper>
+      <label
+        htmlFor={fieldId}
+      >
         <Input
           as = {tag}
           type={type}
@@ -87,8 +88,12 @@ function FormField({
           value={value}
           onChange={onChange}
         />
+         <Label.Text>
+          {label}
+          :
+        </Label.Text>
       </label>
-    </div>
+    </FormFieldWrapper>
   );
 }
 
